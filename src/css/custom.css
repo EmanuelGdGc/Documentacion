@@ -1,0 +1,430 @@
+/**
+ * Garantías Comunitarias - Esquema de Colores Empresariales
+ * Modo Claro: Fondo blanco hueso, texto negro, acentos naranja
+ * Modo Oscuro: Fondo #292c34, texto blanco hueso, acentos naranja
+ */
+
+/* Variables de colores empresariales */
+:root {
+  /* Colores principales GC */
+  --gc-orange: #eb5e3e;
+  --gc-orange-dark: #d54d2a;
+  --gc-orange-darker: #c23d1a;
+  --gc-orange-darkest: #a02f0f;
+  --gc-orange-light: #ef7052;
+  --gc-orange-lighter: #f38266;
+  --gc-orange-lightest: #f7947a;
+
+  --gc-black: #000000;
+  --gc-white-bone: #faf9f7;
+  --gc-dark-bg: #292c34;
+
+  /* Modo claro - Colores principales */
+  --ifm-color-primary: var(--gc-orange);
+  --ifm-color-primary-dark: var(--gc-orange-dark);
+  --ifm-color-primary-darker: var(--gc-orange-darker);
+  --ifm-color-primary-darkest: var(--gc-orange-darkest);
+  --ifm-color-primary-light: var(--gc-orange-light);
+  --ifm-color-primary-lighter: var(--gc-orange-lighter);
+  --ifm-color-primary-lightest: var(--gc-orange-lightest);
+
+  /* Modo claro - Fondos y textos */
+  --ifm-background-color: var(--gc-white-bone);
+  --ifm-background-surface-color: #ffffff;
+  --ifm-color-content: var(--gc-black);
+  --ifm-font-color-base: var(--gc-black);
+  --ifm-heading-color: var(--gc-black);
+
+  /* Navbar y Footer */
+  --ifm-navbar-background-color: var(--gc-black);
+  --ifm-navbar-link-color: var(--gc-white-bone);
+  --ifm-navbar-link-hover-color: var(--gc-orange);
+  --ifm-footer-background-color: var(--gc-black);
+  --ifm-footer-color: var(--gc-white-bone);
+  --ifm-footer-link-color: var(--gc-white-bone);
+  --ifm-footer-link-hover-color: var(--gc-orange);
+
+  /* Sidebar */
+  --ifm-menu-color: var(--gc-black);
+  --ifm-menu-color-background-active: rgba(235, 94, 62, 0.1);
+  --ifm-menu-color-background-hover: rgba(235, 94, 62, 0.05);
+
+  /* Código */
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(235, 94, 62, 0.1);
+
+  /* Botones */
+  --ifm-button-background-color: var(--gc-orange);
+  --ifm-button-border-color: var(--gc-orange);
+}
+
+/* Modo oscuro */
+[data-theme="dark"] {
+  /* Colores principales (mismo naranja) */
+  --ifm-color-primary: var(--gc-orange);
+  --ifm-color-primary-dark: var(--gc-orange-dark);
+  --ifm-color-primary-darker: var(--gc-orange-darker);
+  --ifm-color-primary-darkest: var(--gc-orange-darkest);
+  --ifm-color-primary-light: var(--gc-orange-light);
+  --ifm-color-primary-lighter: var(--gc-orange-lighter);
+  --ifm-color-primary-lightest: var(--gc-orange-lightest);
+
+  /* Modo oscuro - Fondos y textos */
+  --ifm-background-color: var(--gc-dark-bg);
+  --ifm-background-surface-color: #353842;
+  --ifm-color-content: var(--gc-white-bone);
+  --ifm-font-color-base: var(--gc-white-bone);
+  --ifm-heading-color: var(--gc-white-bone);
+
+  /* Navbar y Footer (siguen siendo negros) */
+  --ifm-navbar-background-color: var(--gc-black);
+  --ifm-navbar-link-color: var(--gc-white-bone);
+  --ifm-navbar-link-hover-color: var(--gc-orange);
+  --ifm-footer-background-color: var(--gc-black);
+  --ifm-footer-color: var(--gc-white-bone);
+  --ifm-footer-link-color: var(--gc-white-bone);
+  --ifm-footer-link-hover-color: var(--gc-orange);
+
+  /* Sidebar modo oscuro */
+  --ifm-menu-color: var(--gc-white-bone);
+  --ifm-menu-color-background-active: rgba(235, 94, 62, 0.2);
+  --ifm-menu-color-background-hover: rgba(235, 94, 62, 0.1);
+
+  /* Código modo oscuro */
+  --docusaurus-highlighted-code-line-bg: rgba(235, 94, 62, 0.2);
+
+  /* Botones modo oscuro */
+  --ifm-button-background-color: var(--gc-orange);
+  --ifm-button-border-color: var(--gc-orange);
+}
+
+/* Estilos adicionales para garantizar consistencia */
+
+/* Navbar personalizada */
+.navbar {
+  background-color: var(--gc-black) !important;
+  border-bottom: 2px solid var(--gc-orange);
+}
+
+.navbar__brand {
+  color: var(--gc-white-bone) !important;
+}
+
+.navbar__title {
+  color: var(--gc-white-bone) !important;
+  font-weight: 600;
+}
+
+.navbar__item .navbar__link {
+  color: var(--gc-white-bone) !important;
+  font-weight: 500;
+}
+
+.navbar__item .navbar__link:hover {
+  color: var(--gc-orange) !important;
+}
+
+.navbar__toggle {
+  color: var(--gc-white-bone) !important;
+}
+
+/* Footer personalizado */
+.footer {
+  background-color: var(--gc-black) !important;
+  border-top: 2px solid var(--gc-orange);
+}
+
+.footer__copyright {
+  color: var(--gc-white-bone) !important;
+}
+
+/* Sidebar personalizado */
+.theme-doc-sidebar-container {
+  border-right: 1px solid rgba(235, 94, 62, 0.2);
+}
+
+.menu__link {
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.menu__link:hover {
+  background-color: var(--ifm-menu-color-background-hover);
+  color: var(--gc-orange) !important;
+}
+
+.menu__link--active {
+  background-color: var(--ifm-menu-color-background-active);
+  color: var(--gc-orange) !important;
+  font-weight: 600;
+}
+
+/* Botones personalizados */
+.button {
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.button--primary {
+  background-color: var(--gc-orange);
+  border-color: var(--gc-orange);
+  color: white;
+}
+
+.button--primary:hover {
+  background-color: var(--gc-orange-dark);
+  border-color: var(--gc-orange-dark);
+  color: white;
+  transform: translateY(-1px);
+}
+
+.button--secondary {
+  background-color: transparent;
+  border-color: var(--gc-orange);
+  color: var(--gc-orange);
+}
+
+.button--secondary:hover {
+  background-color: var(--gc-orange);
+  color: white;
+}
+
+/* Enlaces personalizados */
+a {
+  color: var(--gc-orange);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--gc-orange-dark);
+  text-decoration: underline;
+}
+
+/* Tarjetas y contenedores */
+.card {
+  border: 1px solid rgba(235, 94, 62, 0.2);
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.card:hover {
+  border-color: var(--gc-orange);
+  box-shadow: 0 4px 12px rgba(235, 94, 62, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Alertas personalizadas */
+.alert--info {
+  border-left: 4px solid var(--gc-orange);
+  background-color: rgba(235, 94, 62, 0.1);
+}
+
+.alert--warning {
+  border-left: 4px solid #f39c12;
+  background-color: rgba(243, 156, 18, 0.1);
+}
+
+.alert--danger {
+  border-left: 4px solid #e74c3c;
+  background-color: rgba(231, 76, 60, 0.1);
+}
+
+.alert--success {
+  border-left: 4px solid #27ae60;
+  background-color: rgba(39, 174, 96, 0.1);
+}
+
+/* Código personalizado */
+code {
+  background-color: rgba(235, 94, 62, 0.1);
+  color: var(--gc-orange-dark);
+  border-radius: 4px;
+  padding: 2px 6px;
+  font-size: 0.9em;
+}
+
+.prism-code {
+  border-radius: 8px;
+}
+
+/* Tablas personalizadas */
+table {
+  border-collapse: collapse;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th {
+  background-color: var(--gc-orange);
+  color: white;
+  font-weight: 600;
+}
+
+tr:hover {
+  background-color: rgba(235, 94, 62, 0.05);
+}
+
+/* Breadcrumbs */
+.breadcrumbs__link {
+  color: var(--gc-orange);
+}
+
+.breadcrumbs__link:hover {
+  color: var(--gc-orange-dark);
+}
+
+/* Paginación */
+.pagination-nav__link {
+  border: 1px solid rgba(235, 94, 62, 0.2);
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.pagination-nav__link:hover {
+  border-color: var(--gc-orange);
+  background-color: rgba(235, 94, 62, 0.05);
+}
+
+/* Modo oscuro - ajustes específicos */
+[data-theme="dark"] .card {
+  background-color: #353842;
+  border-color: rgba(235, 94, 62, 0.3);
+}
+
+[data-theme="dark"] code {
+  background-color: rgba(235, 94, 62, 0.2);
+  color: var(--gc-orange-light);
+}
+
+[data-theme="dark"] th {
+  background-color: var(--gc-orange-dark);
+}
+
+[data-theme="dark"] tr:hover {
+  background-color: rgba(235, 94, 62, 0.1);
+}
+
+/* Animaciones suaves */
+* {
+  transition: color 0.2s ease, background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+/* Logo personalizado */
+.navbar__logo {
+  height: 32px;
+  margin-right: 12px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .navbar__title {
+    font-size: 1.1rem;
+  }
+
+  .card {
+    margin-bottom: 1rem;
+  }
+}
+
+/* Scrollbar personalizado */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--ifm-background-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gc-orange);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gc-orange-dark);
+}
+
+/* Botón de cambio de tema (modo claro/oscuro) */
+.navbar__item .clean-btn[title*="Switch"] {
+  background-color: #ffffff !important;
+  border: 1px solid rgba(235, 94, 62, 0.3) !important;
+  border-radius: 6px !important;
+  padding: 6px !important;
+  margin-left: 8px !important;
+  transition: all 0.2s ease !important;
+  width: 36px !important;
+  height: 36px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.navbar__item .clean-btn[title*="Switch"]:hover {
+  background-color: #ffffff !important;
+  border-color: var(--gc-orange) !important;
+  transform: scale(1.05) !important;
+  box-shadow: 0 2px 8px rgba(235, 94, 62, 0.2) !important;
+}
+
+/* Iconos del botón de tema */
+.navbar__item .clean-btn[title*="Switch"] svg {
+  width: 18px !important;
+  height: 18px !important;
+  color: var(--gc-black) !important;
+}
+
+/* Modo claro - icono de luna */
+[data-theme="light"] .navbar__item .clean-btn[title*="Switch"] {
+  background-color: #ffffff !important;
+}
+
+[data-theme="light"] .navbar__item .clean-btn[title*="Switch"] svg {
+  color: var(--gc-black) !important;
+}
+
+/* Modo oscuro - icono de sol */
+[data-theme="dark"] .navbar__item .clean-btn[title*="Switch"] {
+  background-color: #ffffff !important;
+}
+
+[data-theme="dark"] .navbar__item .clean-btn[title*="Switch"] svg {
+  color: var(--gc-orange) !important;
+}
+
+/* Asegurar que el botón sea visible en ambos modos */
+.navbar__item .clean-btn[title*="Switch"] {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* Hero section - asegurar que no tenga fondo de color */
+.hero {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+.hero--primary {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+/* Asegurar que el contenedor principal tenga el fondo correcto */
+.main-wrapper {
+  background-color: var(--ifm-background-color) !important;
+}
+
+/* Página de inicio - contenedor principal */
+.container {
+  background: transparent !important;
+}
+
+/* Ajustes adicionales para el hero */
+.hero__title {
+  color: var(--ifm-font-color-base) !important;
+}
+
+.hero__subtitle {
+  color: var(--ifm-font-color-base) !important;
+}
