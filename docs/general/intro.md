@@ -3,33 +3,48 @@ sidebar_position: 1
 slug: /
 ---
 
-# Documentación Técnica Beta
+# Docusaurus
 
-Bienvenido a la documentación técnica de Garantías Comunitarias. Esta es una versión beta de nuestra plataforma de documentación unificada.
+Esta documentación está construida con **Docusaurus**, una plataforma moderna para crear sitios de documentación técnica.
 
-## Productos GC
+## ¿Qué es Docusaurus?
 
-### GC Risk
-Sistema principal de gestión de riesgos financieros. Incluye módulos para análisis de concentración, evaluación crediticia y reportes regulatorios.
+Docusaurus es un generador de sitios estáticos creado por **Meta (Facebook)** específicamente diseñado para proyectos de documentación. Permite crear sitios web rápidos, accesibles y fáciles de mantener.
 
-### GC Bloom Risk
-Sistema avanzado de análisis y modelado de riesgos con capacidades de machine learning y análisis predictivo.
+### Características principales:
 
-### GCM
-Módulo de gestión complementario para operaciones administrativas y de soporte.
+- **Markdown nativo**: Escribe documentación en Markdown con extensiones MDX
+- **React integrado**: Componentes interactivos y personalizables
+- **Búsqueda incorporada**: Búsqueda instantánea en toda la documentación
+- **Responsive**: Optimizado para dispositivos móviles y escritorio
+- **Versionado**: Soporte para múltiples versiones de documentación
+- **Internacionalización**: Soporte multi-idioma
 
-### GC Mutual
-Módulo especializado en gestión mutual y cooperativa.
+## ¿Por qué Docusaurus en Garantías Comunitarias?
+
+En Garantías Comunitarias utilizamos Docusaurus para centralizar toda nuestra documentación técnica porque nos ofrece:
+
+### Ventajas para nuestro equipo:
+
+- **Colaboración eficiente**: Los desarrolladores pueden contribuir usando Git y Markdown
+- **Mantenimiento simplificado**: Una sola plataforma para toda la documentación
+- **Búsqueda avanzada**: Encuentra información técnica rápidamente
+- **Navegación intuitiva**: Estructura clara por productos y módulos
+
+### Productos documentados:
+
+- **GC Risk**: Sistema principal de gestión de riesgos financieros
+- Módulos de análisis, APIs y arquitectura técnica
 
 ## Navegación
 
-Utiliza la barra lateral para explorar la documentación de cada producto. Cada sección incluye:
+Utiliza la barra lateral para explorar:
 
-- Contexto y objetivos
-- Guías de instalación
-- Documentación de arquitectura
-- Referencias de API
+- Arquitectura de sistemas
+- Documentación de APIs
+- Guías de desarrollo
+- Referencias técnicas
 
 ---
 
-**Nota**: Esta es una versión beta. La documentación está en desarrollo continuo.
+**Versión Beta**: Documentación en desarrollo continuo con Docusaurus v2

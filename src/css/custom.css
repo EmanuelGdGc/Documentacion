@@ -346,8 +346,11 @@ tr:hover {
   background: var(--gc-orange-dark);
 }
 
-/* Botón de cambio de tema (modo claro/oscuro) */
-.navbar__item .clean-btn[title*="Switch"] {
+/* Botón de cambio de tema (modo claro/oscuro) - SIEMPRE fondo blanco */
+.navbar__item .clean-btn[title*="Switch"],
+.navbar__item button[title*="Switch"],
+.navbar__item .toggle_node_modules,
+.navbar__item [class*="toggle"] {
   background-color: #ffffff !important;
   border: 1px solid rgba(235, 94, 62, 0.3) !important;
   border-radius: 6px !important;
@@ -359,44 +362,67 @@ tr:hover {
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) !important;
 }
 
-.navbar__item .clean-btn[title*="Switch"]:hover {
+.navbar__item .clean-btn[title*="Switch"]:hover,
+.navbar__item button[title*="Switch"]:hover,
+.navbar__item .toggle_node_modules:hover,
+.navbar__item [class*="toggle"]:hover {
   background-color: #ffffff !important;
   border-color: var(--gc-orange) !important;
   transform: scale(1.05) !important;
-  box-shadow: 0 2px 8px rgba(235, 94, 62, 0.2) !important;
+  box-shadow: 0 2px 8px rgba(235, 94, 62, 0.3) !important;
 }
 
-/* Iconos del botón de tema */
-.navbar__item .clean-btn[title*="Switch"] svg {
+/* Iconos del botón de tema - siempre visibles */
+.navbar__item .clean-btn[title*="Switch"] svg,
+.navbar__item button[title*="Switch"] svg,
+.navbar__item .toggle_node_modules svg,
+.navbar__item [class*="toggle"] svg {
   width: 18px !important;
   height: 18px !important;
   color: var(--gc-black) !important;
 }
 
-/* Modo claro - icono de luna */
-[data-theme="light"] .navbar__item .clean-btn[title*="Switch"] {
+/* Modo claro - icono de luna (negro sobre blanco) */
+[data-theme="light"] .navbar__item .clean-btn[title*="Switch"],
+[data-theme="light"] .navbar__item button[title*="Switch"],
+[data-theme="light"] .navbar__item .toggle_node_modules,
+[data-theme="light"] .navbar__item [class*="toggle"] {
   background-color: #ffffff !important;
 }
 
-[data-theme="light"] .navbar__item .clean-btn[title*="Switch"] svg {
+[data-theme="light"] .navbar__item .clean-btn[title*="Switch"] svg,
+[data-theme="light"] .navbar__item button[title*="Switch"] svg,
+[data-theme="light"] .navbar__item .toggle_node_modules svg,
+[data-theme="light"] .navbar__item [class*="toggle"] svg {
   color: var(--gc-black) !important;
 }
 
-/* Modo oscuro - icono de sol */
-[data-theme="dark"] .navbar__item .clean-btn[title*="Switch"] {
+/* Modo oscuro - icono de sol (naranja sobre blanco) */
+[data-theme="dark"] .navbar__item .clean-btn[title*="Switch"],
+[data-theme="dark"] .navbar__item button[title*="Switch"],
+[data-theme="dark"] .navbar__item .toggle_node_modules,
+[data-theme="dark"] .navbar__item [class*="toggle"] {
   background-color: #ffffff !important;
 }
 
-[data-theme="dark"] .navbar__item .clean-btn[title*="Switch"] svg {
+[data-theme="dark"] .navbar__item .clean-btn[title*="Switch"] svg,
+[data-theme="dark"] .navbar__item button[title*="Switch"] svg,
+[data-theme="dark"] .navbar__item .toggle_node_modules svg,
+[data-theme="dark"] .navbar__item [class*="toggle"] svg {
   color: var(--gc-orange) !important;
 }
 
-/* Asegurar que el botón sea visible en ambos modos */
-.navbar__item .clean-btn[title*="Switch"] {
+/* Asegurar máxima visibilidad del botón */
+.navbar__item .clean-btn[title*="Switch"],
+.navbar__item button[title*="Switch"],
+.navbar__item .toggle_node_modules,
+.navbar__item [class*="toggle"] {
   opacity: 1 !important;
   visibility: visible !important;
+  z-index: 999 !important;
 }
 
 /* Hero section - asegurar que no tenga fondo de color */

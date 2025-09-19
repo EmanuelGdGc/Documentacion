@@ -59,6 +59,7 @@ php artisan db:seed
 ### 5. Configuración del Servidor Web
 
 #### Nginx
+
 ```nginx
 server {
     listen 80;

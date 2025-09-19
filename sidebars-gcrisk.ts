@@ -10,6 +10,15 @@ const sidebars: SidebarsConfig = {
         'index',
         'arquitectura',
         'instalacion',
+        'instalacionBack',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Despliegues',
+      collapsed: false,
+      items: [
+        'despliegues/index',
       ],
     },
     {

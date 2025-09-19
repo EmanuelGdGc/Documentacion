@@ -1,41 +1,110 @@
-# Website
+# Centro de Documentación - Garantías Comunitarias
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+Este sitio web está construido usando [Docusaurus](https://docusaurus.io/), un generador moderno de sitios web estáticos.
 
-## Installation
+## 📋 Requisitos Previos
 
+- **Node.js** versión 18.0 o superior
+- **npm** o **yarn** como gestor de paquetes
+
+## 🚀 Instalación
+
+### Usando npm:
 ```bash
-yarn
+npm install
 ```
 
-## Local Development
+### Usando yarn:
+```bash
+yarn install
+```
 
+## 💻 Desarrollo Local
+
+### Usando npm:
+```bash
+npm start
+```
+
+### Usando yarn:
 ```bash
 yarn start
 ```
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+Este comando inicia un servidor de desarrollo local y abre una ventana del navegador en `http://localhost:3000`. La mayoría de los cambios se reflejan en vivo sin necesidad de reiniciar el servidor.
 
-## Build
+## 🏗️ Construcción
 
+### Usando npm:
+```bash
+npm run build
+```
+
+### Usando yarn:
 ```bash
 yarn build
 ```
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
+Este comando genera contenido estático en el directorio `build` y puede ser servido usando cualquier servicio de hosting de contenido estático.
 
-## Deployment
+## 🧪 Probar Build Local
 
-Using SSH:
-
+### Usando npm:
 ```bash
-USE_SSH=true yarn deploy
+npm run serve
 ```
 
-Not using SSH:
-
+### Usando yarn:
 ```bash
-GIT_USER=<Your GitHub username> yarn deploy
+yarn serve
 ```
 
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+## 📁 Estructura del Proyecto
+
+```
+Documentacion/
+├── docs/                    # Documentación por módulos
+│   ├── general/            # Documentación general
+│   ├── gcrisk/            # Documentación GCRisk
+│   ├── gcbloomrisk/       # Documentación GCBloomRisk
+│   ├── gcm/               # Documentación GCM
+│   └── gcmutual/          # Documentación GCMutual
+├── src/                    # Código fuente personalizado
+│   ├── components/        # Componentes React
+│   ├── css/              # Estilos personalizados
+│   └── pages/            # Páginas personalizadas
+├── static/                # Archivos estáticos
+├── docusaurus.config.ts   # Configuración principal
+└── package.json           # Dependencias y scripts
+```
+
+## 🔍 Funcionalidades
+
+- **Búsqueda Local**: Barra de búsqueda integrada para encontrar contenido rápidamente
+- **Múltiples Módulos**: Documentación organizada por sistemas (GCRisk, GCBloomRisk, GCM, GCMutual)
+- **Responsive**: Diseño adaptable para dispositivos móviles y desktop
+- **Modo Oscuro**: Soporte para tema claro y oscuro
+
+## 🛠️ Comandos Útiles
+
+- `npm run clear` - Limpia la caché de Docusaurus
+- `npm run typecheck` - Verifica tipos de TypeScript
+- `npm run swizzle` - Personaliza componentes de Docusaurus
+
+## 📚 Documentación
+
+Para más información sobre cómo usar y personalizar Docusaurus, consulta la [documentación oficial](https://docusaurus.io/).
+
+## 🤝 Contribución
+
+Para contribuir a la documentación:
+
+1. Clona el repositorio
+2. Crea una rama para tu feature/fix
+3. Realiza tus cambios
+4. Prueba localmente con `npm start`
+5. Crea un Pull Request
+
+## 📄 Licencia
+
+Copyright © 2025 Garantías Comunitarias

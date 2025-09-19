@@ -77,6 +77,20 @@ const config: Config = {
         sidebarPath: "./sidebars-gcmutual.ts",
       },
     ],
+    [
+      "@easyops-cn/docusaurus-search-local",
+      {
+        hashed: true,
+        language: ["es", "en"],
+        indexDocs: true,
+        indexBlog: false,
+        indexPages: true,
+        docsRouteBasePath: ["/docs", "/gcrisk", "/gcbloomrisk", "/gcm", "/gcmutual"],
+        searchResultLimits: 8,
+        searchResultContextMaxLength: 50,
+        explicitSearchResultPath: false,
+      },
+    ],
   ],
 
   themeConfig: {

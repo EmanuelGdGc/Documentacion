@@ -106,8 +106,32 @@ Obtiene la lista de deudores con su concentración.
 }
 ```
 
-### GET /api/concentracion-deudores/{id}
+### GET /api/concentracion-deudores/\{id\}
 Obtiene el detalle de un deudor específico.
+
+**Parámetros:**
+- `id` (required): ID único del deudor
+
+**Respuesta:**
+```json
+{
+  "success": true,
+  "data": {
+    "id": 1,
+    "nombreDeudor": "Juan Pérez",
+    "identificacion": "12345678",
+    "saldo": 50000000,
+    "porcentaje": 0.15,
+    "historial": [
+      {
+        "fecha": "2024-01-01",
+        "saldo": 45000000,
+        "porcentaje": 0.13
+      }
+    ]
+  }
+}
+```
 
 ### POST /api/concentracion-deudores/export
 Exporta los datos en formato Excel o PDF.
